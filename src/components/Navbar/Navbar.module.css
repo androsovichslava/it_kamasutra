@@ -1,0 +1,20 @@
+.nav {
+    grid-area: n;
+    background-color: rgb(185, 235, 179);
+    padding: 10px;
+}
+
+.item {
+    color: rgb(225, 139, 9);
+}
+
+.item a {
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    font-weight: bold;
+}
+
+.active_link {
+    background-color: blueviolet;
+    color: rgb(229, 215, 215);
+}
