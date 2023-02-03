@@ -10,28 +10,38 @@ import { Settings } from './components/Settings/Settings';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = (props) => {
-
-
+  console.log(props.addPost);
   return (
-    <BrowserRouter>
-      <div className="app-wrapper">
-        <Header />
-        <Navbar />
-        <div className='app-wrapper-content'>
-          <Routes>
-            <Route path='/dialogs' element={<Dialogs
-              messageData={props.appState.messagesPage.messages}
-              dialogsData={props.appState.messagesPage.dialogs} />}
-            />
-            <Route path='/' element={<Profile postData={props.appState.profilePage.posts} />} />
-            <Route path='/profile' element={<Profile postData={props.appState.profilePage.posts} />} />
-            <Route path='/news' element={<News />} />
-            <Route path='/music' element={<Music />} />
-            <Route path='/settings' element={<Settings />} />
-          </Routes>
-        </div>
+
+    <div className="app-wrapper">
+      <Header />
+      <Navbar />
+      <div className='app-wrapper-content'>
+        <Routes>
+          <Route path='/dialogs' element={<Dialogs
+            messageData={props.appState.messagesPage.messages}
+            dialogsData={props.appState.messagesPage.dialogs} />}
+          />
+          <Route path='/'
+            element={
+              <Profile
+                postData={props.appState.profilePage.posts}
+                addPost={props.addPost}
+              />}
+          />
+          <Route path='/profile'
+            element={
+              <Profile
+                postData={props.appState.profilePage.posts}
+                addPost={props.addPost}
+              />}
+          />
+          <Route path='/news' element={<News />} />
+          <Route path='/music' element={<Music />} />
+          <Route path='/settings' element={<Settings />} />
+        </Routes>
       </div>
-    </BrowserRouter>
+    </div>
   );
 }
 
