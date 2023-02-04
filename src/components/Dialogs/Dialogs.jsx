@@ -12,7 +12,9 @@ export const Dialogs = (props) => {
     }
     let onNewMessageChange = (e) => {
         let body = e.target.value;
-        props.store.dispatch(updateNewMessageBodyCreator(body));
+        let action = updateNewMessageBodyCreator(body);
+        console.log(action)
+        props.store.dispatch(action);
     }
 
     let dialogsElements = state.dialogs.map((dialog, index) => <DialogItem key={index} name={dialog.name} id={dialog.id} />);
@@ -29,8 +31,9 @@ export const Dialogs = (props) => {
                 </div>
                 <div><textarea
                     value={newMessageBody}
-                    placeholder='enter you message'
                     onChange={onNewMessageChange}
+                    placeholder='enter you message'
+
                 ></textarea></div>
                 <div><button onClick={onSendMessageClick}>Добавить сообщение</button></div>
             </div>
