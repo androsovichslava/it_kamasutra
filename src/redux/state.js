@@ -1,13 +1,13 @@
+const ADD_POST = 'ADD-POST';
+
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+
 let store = {
     _state: {
         profilePage: {
             posts: [
                 { id: 1, name: 'Пост 22222222222', likesCount: 12 },
                 { id: 2, name: 'Пост 22222222222', likesCount: 12 },
-                { id: 3, name: 'Пост 22222222222', likesCount: 12 },
-                { id: 4, name: 'Пост 22222222222', likesCount: 132 },
-                { id: 5, name: 'Пост 22222222222', likesCount: 123 },
-                { id: 6, name: 'Пост 22222222222', likesCount: 13 },
                 { id: 7, name: 'Пост 22222222222', likesCount: 1 }
             ],
             newPostText: 'it-kamasutra'
@@ -73,5 +73,10 @@ let store = {
     }
 
 }
+
+export const addPostActionCreator = () => ({ type: ADD_POST });
+
+export const addUpdatePostTextActionCreator = (text) => ({ type: UPDATE_NEW_POST_TEXT, newtext: text })
+
 export default store;
 window.store = store;
