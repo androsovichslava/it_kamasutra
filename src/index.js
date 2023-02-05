@@ -6,13 +6,13 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let rerenderEntireTree = (state) => {
+    console.log('Hello from render')
 
     root.render(
         <BrowserRouter>
             <App
                 state={state}
                 dispatch={store.dispatch.bind(store)}
-                updateNewPostText={store.updateNewPostText.bind(store)}
                 store={store}
             />
         </BrowserRouter>

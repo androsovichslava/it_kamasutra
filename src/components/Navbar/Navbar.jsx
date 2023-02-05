@@ -1,8 +1,8 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import s from './Navbar.module.css'
+import React from 'react';
+import s from './Navbar.module.css';
+import { NavLink } from "react-router-dom";
 
-export const Navbar = () => {
+const Navbar = () => {
     return (
         <nav className={s.nav}>
             <div className={s.item}><NavLink to='/profile' className={({ isActive }) => isActive ? s.active_link : s.item}>Profile</NavLink></div>
@@ -13,3 +13,5 @@ export const Navbar = () => {
         </nav>
     )
 }
+
+export default Navbar;

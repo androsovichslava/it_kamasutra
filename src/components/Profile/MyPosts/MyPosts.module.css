@@ -1,19 +1,7 @@
-.postss {
-    color: rgb(194, 219, 192);
-    background-color: brown;
-}
-
-.newpost {
-    color: rgb(235, 57, 146);
-
-}
-
-.newpost button {
-    padding: 5px;
-    font-size: medium;
-}
-
 .postsBlock {
     padding: 10px;
-    background-color: aquamarine;
+}
+
+.posts {
+    margin-top: 10px;
 }

@@ -1,23 +1,12 @@
 .item {
-    color: rgb(240, 245, 242);
-    background-color: rgb(187, 237, 191);
-    padding: 5px;
-
-    display: flex;
+  color: greenyellow;
+  display: flex;
 }
 
 .item img {
-    width: 100px;
-    border-radius: 50%;
-}
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  padding: 5px;
 
-.item div {
-    padding: 1px;
-    background-color: blueviolet;
-    margin: 1px;
-}
-
-.message_text {
-    width: 100%;
-    margin-left: 50px;
 }

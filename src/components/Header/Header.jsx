@@ -1,8 +1,10 @@
-import React from 'react'
-import s from './Header.module.css'
+import React from 'react';
+import s from './Header.module.css';
 
-export const Header = () => {
+const Header = () => {
     return <header className={s.header}>
-        <img src="https://avatars.mds.yandex.net/i?id=9ebf8d358a081b1c7aebb7b3b4280ca087a06157-5478356-images-thumbs&n=13" alt="Company Name" />
+        <img src='https://avatars.mds.yandex.net/i?id=064679984a0ba5dfbac6b2859d988bba-4904220-images-thumbs&n=13' />
     </header>
 }
+
+export default Header;
