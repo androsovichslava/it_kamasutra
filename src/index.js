@@ -7,8 +7,6 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let rerenderEntireTree = (state) => {
-    console.log(state)
-
     root.render(
         <BrowserRouter>
             <App
